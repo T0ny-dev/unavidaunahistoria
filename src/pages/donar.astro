@@ -1,0 +1,170 @@
+---
+import Navbar from '../components/Navbar';
+import WhatsAppButton from '../components/WhatsAppButton';
+import { Gift, HandHeart, Users, HeartHandshake } from 'lucide-react';
+import '../styles/global.css';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donar - Una Vida Una Historia A.C.</title>
+    <meta name="description" content="Dona y apoya a Una Vida Una Historia A.C. en Parral, Chihuahua. Tu ayuda transforma vidas." />
+  </head>
+  <body>
+    <Navbar client:load />
+    <main>
+      <section class="donar-hero">
+        <div class="donar-hero-content container">
+          <div class="donar-hero-left">
+            <h1 class="donar-title"><Gift size={32} style={{marginRight:'12px', verticalAlign:'middle'}} />Donar</h1>
+            <p class="donar-desc">Tu donativo ayuda a transformar vidas y a seguir cumpliendo sueños en Parral, Chihuahua. ¡Gracias por tu generosidad!</p>
+            <WhatsAppButton mensaje="Hola, me gustaría donar a Una Vida Una Historia A.C. ¿Me pueden dar información?" />
+          </div>
+          <div class="donar-hero-right">
+            <img src="/c3.jpg" alt="Campaña navideña" class="donar-hero-img" />
+          </div>
+        </div>
+      </section>
+
+      <section class="donar-info container">
+        <h2><HandHeart size={28} style={{marginRight:'8px', verticalAlign:'middle'}} />¿Por qué donar?</h2>
+        <p>Con tu apoyo podemos:</p>
+        <ul class="donar-list">
+          <li><Users size={20} style={{marginRight:'8px'}} />Beneficiar a más familias y niños en situación vulnerable.</li>
+          <li><HeartHandshake size={20} style={{marginRight:'8px'}} />Realizar campañas de salud, educación y alimentación.</li>
+          <li><Gift size={20} style={{marginRight:'8px'}} />Cumplir sueños y necesidades básicas de la comunidad.</li>
+        </ul>
+        <div class="donar-galeria">
+          <img src="/c1.jpg" alt="Habilidades para la vida" />
+          <img src="/c5.jpg" alt="Recaudación en especie" />
+          <img src="/c6.jpg" alt="Bazar gratuito" />
+          <img src="/volutarios.png" alt="Voluntarios" />
+        </div>
+        <div class="donar-cta">
+          <WhatsAppButton mensaje="Hola, quiero donar a Una Vida Una Historia A.C. ¿Cómo puedo hacerlo?" />
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Una Vida Una Historia A.C.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+.donar-hero {
+  background: linear-gradient(90deg, #05A0E0 60%, #BDFE02 100%);
+  padding: 4rem 0 2rem 0;
+  color: #fff;
+}
+.donar-hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.donar-hero-left {
+  flex: 1;
+}
+.donar-title {
+  font-size: 2.7rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.donar-desc {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.donar-hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.donar-hero-img {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+.donar-info {
+  margin: 4rem auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.donar-info h2 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.donar-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.donar-list li {
+  background: var(--color-secondary);
+  color: #222;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.donar-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+.donar-galeria img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  object-fit: cover;
+  background: #f8f9fa;
+  height: 140px;
+}
+.donar-cta {
+  margin-top: 2.5rem;
+}
+@media (max-width: 900px) {
+  .donar-hero-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .donar-hero-img {
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .donar-hero {
+    padding: 2rem 0 1rem 0;
+  }
+  .donar-info {
+    padding: 1.5rem 0.5rem;
+  }
+  .donar-title {
+    font-size: 1.5rem;
+  }
+}
+</style> 

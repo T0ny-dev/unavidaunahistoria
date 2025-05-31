@@ -1,0 +1,106 @@
+---
+import Navbar from '../components/Navbar';
+import '../styles/global.css';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campañas - Una Vida Una Historia A.C.</title>
+    <meta name="description" content="Evidencias fotográficas de campañas y actividades de Una Vida Una Historia A.C." />
+  </head>
+  <body>
+    <Navbar client:load />
+    <main>
+      <section class="container">
+        <h1 class="page-title">Evidencias de Campañas</h1>
+        <p class="campanas-subtitle">Galería de fotos de nuestras actividades y campañas.</p>
+        <div class="campanas-galeria-grid">
+          <div class="campana-card"><img src="/c1.jpg" alt="Evidencia 1" /><p>Bambú - Habilidades para la vida</p></div>
+          <div class="campana-card"><img src="/c2.jpg" alt="Evidencia 2" /><p>Bambú - Habilidades para la vida</p></div>
+          <div class="campana-card"><img src="/c3.jpg" alt="Evidencia 3" /><p>Campaña navideña</p></div>
+          <div class="campana-card"><img src="/c4.jpg" alt="Evidencia 4" /><p>Habilidades para la vida</p></div>
+          <div class="campana-card"><img src="/c5.jpg" alt="Evidencia 5" /><p>Recaudación en especie de ropa y artículos diversos para donación</p></div>
+          <div class="campana-card"><img src="/c6.jpg" alt="Evidencia 6" /><p>Bazares gratuitos para comunidades indígenas</p></div>
+          <div class="campana-card"><img src="/c7.jpg" alt="Evidencia 7" /><p>Programa habilidades para la vida</p></div>
+          <div class="campana-card"><img src="/c8.jpg" alt="Evidencia 8" /><p>Habilidades para la vida</p></div>
+          <div class="campana-card"><img src="/c9.jpg" alt="Evidencia 9" /><p>Talleres de liderazgo donde participan voluntarios</p></div>
+          <div class="campana-card"><img src="/c10.jpg" alt="Evidencia 10" /><p>Talleres de liderazgo donde participan voluntarios</p></div>
+          <div class="campana-card"><img src="/c12.jpg" alt="Evidencia 12" /><p>Programa de alimentación</p></div>
+          <div class="campana-card"><img src="/c13.jpg" alt="Evidencia 13" /><p>Habilidades para la vida</p></div>
+          <div class="campana-card"><img src="/c15.jpg" alt="Evidencia 15" /><p>Campaña asistencia al vestido</p></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Una Vida Una Historia A.C.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .page-title {
+    color: var(--color-primary);
+    text-align: center;
+    margin: 3rem 0 1rem 0;
+    font-size: 2.5rem;
+  }
+  .campanas-subtitle {
+    text-align: center;
+    color: #444;
+    margin-bottom: 2.5rem;
+    font-size: 1.15rem;
+  }
+  .campanas-galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  .campana-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 340px;
+  }
+  .campana-card img {
+    width: 100%;
+    max-width: 320px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    background: #eee;
+  }
+  .campana-card p {
+    color: #333;
+    font-size: 1.05rem;
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+  .footer {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  @media (max-width: 700px) {
+    .campanas-galeria-grid {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+    .campana-card {
+      min-height: 0;
+      padding: 1rem 0.5rem 1.2rem 0.5rem;
+    }
+  }
+</style> 

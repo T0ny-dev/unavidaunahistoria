@@ -1,0 +1,199 @@
+---
+import Navbar from '../components/Navbar';
+import WhatsAppButton from '../components/WhatsAppButton';
+import '../styles/global.css';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colaborar - Una Vida Una Historia A.C.</title>
+    <meta name="description" content="Descubre las diferentes formas de colaborar con Una Vida Una Historia A.C. en Parral, Chihuahua." />
+  </head>
+  <body>
+    <Navbar client:load />
+    <main>
+      <section class="container">
+        <h1 class="page-title">Colaborar</h1>
+
+        <div class="info-container">
+          <div class="info-content">
+            <h2>Formas de Colaborar</h2>
+            <p>Hay muchas maneras de apoyar nuestra causa y hacer una diferencia en nuestra comunidad:</p>
+
+            <div class="collaboration-grid">
+              <div class="collaboration-card">
+                <h3>Donaciones en Efectivo</h3>
+                <p>Tu contribución económica nos ayuda a mantener y expandir nuestros proyectos sociales.</p>
+                <ul>
+                  <li>Donación única</li>
+                  <li>Donación mensual</li>
+                  <li>Donación por proyecto</li>
+                </ul>
+              </div>
+
+              <div class="collaboration-card">
+                <h3>Donaciones en Especie</h3>
+                <p>Aceptamos donaciones de:</p>
+                <ul>
+                  <li>Ropa y calzado</li>
+                  <li>Juguetes y libros</li>
+                  <li>Víveres y alimentos</li>
+                  <li>Material escolar</li>
+                </ul>
+              </div>
+
+              <div class="collaboration-card">
+                <h3>Apoyo Empresarial</h3>
+                <p>Las empresas pueden colaborar a través de:</p>
+                <ul>
+                  <li>Programas de responsabilidad social</li>
+                  <li>Matching gifts</li>
+                  <li>Voluntariado corporativo</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="impact-section">
+              <h2>Tu Impacto</h2>
+              <div class="impact-grid">
+                <div class="impact-item">
+                  <h3>100+</h3>
+                  <p>Familias beneficiadas</p>
+                </div>
+                <div class="impact-item">
+                  <h3>50+</h3>
+                  <p>Voluntarios activos</p>
+                </div>
+                <div class="impact-item">
+                  <h3>20+</h3>
+                  <p>Proyectos realizados</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cta-section">
+              <h2>¿Cómo puedo colaborar?</h2>
+              <p>Contáctanos para conocer más sobre las diferentes formas de colaboración y cómo puedes hacer una diferencia en nuestra comunidad.</p>
+              <WhatsAppButton client:load mensaje="Hola, me gustaría información sobre cómo puedo colaborar con Una Vida Una Historia A.C." />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Una Vida Una Historia A.C.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .page-title {
+    color: var(--color-primary);
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 2.5rem;
+  }
+
+  .info-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .info-content h2 {
+    color: var(--color-primary);
+    margin: 2rem 0 1rem;
+    text-align: center;
+  }
+
+  .collaboration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .collaboration-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .collaboration-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .collaboration-card ul {
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 1rem;
+  }
+
+  .collaboration-card li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .collaboration-card li::before {
+    content: "•";
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+  }
+
+  .impact-section {
+    margin: 4rem 0;
+    text-align: center;
+  }
+
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .impact-item h3 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-section {
+    text-align: center;
+    margin: 4rem 0;
+    padding: 2rem;
+    background: var(--color-secondary);
+    border-radius: 8px;
+  }
+
+  .cta-section h2 {
+    margin-top: 0;
+  }
+
+  .footer {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    .collaboration-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .impact-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+</style> 

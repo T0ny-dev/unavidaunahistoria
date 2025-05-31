@@ -1,0 +1,157 @@
+---
+import Navbar from '../components/Navbar';
+import WhatsAppButton from '../components/WhatsAppButton';
+import '../styles/global.css';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voluntariado - Una Vida Una Historia A.C.</title>
+    <meta name="description" content="Únete como voluntario a Una Vida Una Historia A.C. y ayuda a transformar vidas en Parral, Chihuahua." />
+  </head>
+  <body>
+    <Navbar client:load />
+    <main>
+      <section class="container">
+        <h1 class="page-title">Voluntariado</h1>
+
+        <div class="info-container">
+          <div class="info-content">
+            <h2>¿Por qué ser voluntario?</h2>
+            <p>Ser voluntario en Una Vida Una Historia A.C. es una oportunidad única para:</p>
+            <ul class="benefits-list">
+              <li>Contribuir directamente al bienestar de tu comunidad</li>
+              <li>Desarrollar nuevas habilidades y experiencias</li>
+              <li>Conocer personas con intereses similares</li>
+              <li>Crear un impacto positivo en la vida de otros</li>
+            </ul>
+
+            <h2>¿Qué necesitas para ser voluntario?</h2>
+            <ul class="requirements-list">
+              <li>Mayor de 18 años</li>
+              <li>Disponibilidad de tiempo</li>
+              <li>Compromiso y empatía</li>
+              <li>Ganas de ayudar</li>
+            </ul>
+
+            <h2>Áreas de voluntariado</h2>
+            <div class="areas-grid">
+              <div class="area-card">
+                <h3>Logística</h3>
+                <p>Apoyo en la organización de eventos y campañas</p>
+              </div>
+              <div class="area-card">
+                <h3>Comunicación</h3>
+                <p>Difusión de actividades y redes sociales</p>
+              </div>
+              <div class="area-card">
+                <h3>Proyectos</h3>
+                <p>Participación directa en proyectos sociales</p>
+              </div>
+            </div>
+
+            <div class="cta-section">
+              <h2>¿Listo para unirte?</h2>
+              <p>Contáctanos para más información sobre cómo puedes ser parte de nuestro equipo de voluntarios.</p>
+              <WhatsAppButton client:load mensaje="Hola, me gustaría información sobre cómo ser voluntario en Una Vida Una Historia A.C." />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Una Vida Una Historia A.C.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .page-title {
+    color: var(--color-primary);
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 2.5rem;
+  }
+
+  .info-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .info-content h2 {
+    color: var(--color-primary);
+    margin: 2rem 0 1rem;
+  }
+
+  .benefits-list,
+  .requirements-list {
+    list-style: none;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .benefits-list li,
+  .requirements-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .benefits-list li::before,
+  .requirements-list li::before {
+    content: "•";
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+  }
+
+  .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .area-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .area-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-section {
+    text-align: center;
+    margin: 4rem 0;
+    padding: 2rem;
+    background: var(--color-secondary);
+    border-radius: 8px;
+  }
+
+  .cta-section h2 {
+    margin-top: 0;
+  }
+
+  .footer {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    .areas-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 
