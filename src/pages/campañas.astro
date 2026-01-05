@@ -1,106 +1,222 @@
 ---
-import Navbar from '../components/Navbar';
-import '../styles/global.css';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import "../styles/landing.css";
+import { Facebook, ImageIcon, GalleryHorizontal, Calendar } from "lucide-react";
+
+const historicCampaigns = [
+  { img: "/c1.jpg", title: "Bambú - Habilidades para la vida" },
+  { img: "/c2.jpg", title: "Bambú - Talleres Comunitarios" },
+  { img: "/c3.jpg", title: "Campaña Navideña Solidaria" },
+  { img: "/c4.jpg", title: "Habilidades para la Vida" },
+  { img: "/c5.jpg", title: "Recaudación en Especie" },
+  { img: "/c6.jpg", title: "Bazares Gratuitos" },
+  { img: "/c7.jpg", title: "Apoyo a la Nutrición" },
+  { img: "/c8.jpg", title: "Juguetes por Sonrisas" },
+  { img: "/c9.jpg", title: "Salud Comunitaria" },
+];
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Campañas - Una Vida Una Historia A.C.</title>
-    <meta name="description" content="Evidencias fotográficas de campañas y actividades de Una Vida Una Historia A.C." />
+    <title>Impacto y Campañas - Una Vida Una Historia A.C.</title>
+    <meta
+      name="description"
+      content="Evidencias fotográficas de nuestras actividades y campañas solidarias. Transformando realidades en Parral, Chihuahua."
+    />
   </head>
   <body>
     <Navbar client:load />
     <main>
-      <section class="container">
-        <h1 class="page-title">Evidencias de Campañas</h1>
-        <p class="campanas-subtitle">Galería de fotos de nuestras actividades y campañas.</p>
-        <div class="campanas-galeria-grid">
-          <div class="campana-card"><img src="/c1.jpg" alt="Evidencia 1" /><p>Bambú - Habilidades para la vida</p></div>
-          <div class="campana-card"><img src="/c2.jpg" alt="Evidencia 2" /><p>Bambú - Habilidades para la vida</p></div>
-          <div class="campana-card"><img src="/c3.jpg" alt="Evidencia 3" /><p>Campaña navideña</p></div>
-          <div class="campana-card"><img src="/c4.jpg" alt="Evidencia 4" /><p>Habilidades para la vida</p></div>
-          <div class="campana-card"><img src="/c5.jpg" alt="Evidencia 5" /><p>Recaudación en especie de ropa y artículos diversos para donación</p></div>
-          <div class="campana-card"><img src="/c6.jpg" alt="Evidencia 6" /><p>Bazares gratuitos para comunidades indígenas</p></div>
-          <div class="campana-card"><img src="/c7.jpg" alt="Evidencia 7" /><p>Programa habilidades para la vida</p></div>
-          <div class="campana-card"><img src="/c8.jpg" alt="Evidencia 8" /><p>Habilidades para la vida</p></div>
-          <div class="campana-card"><img src="/c9.jpg" alt="Evidencia 9" /><p>Talleres de liderazgo donde participan voluntarios</p></div>
-          <div class="campana-card"><img src="/c10.jpg" alt="Evidencia 10" /><p>Talleres de liderazgo donde participan voluntarios</p></div>
-          <div class="campana-card"><img src="/c12.jpg" alt="Evidencia 12" /><p>Programa de alimentación</p></div>
-          <div class="campana-card"><img src="/c13.jpg" alt="Evidencia 13" /><p>Habilidades para la vida</p></div>
-          <div class="campana-card"><img src="/c15.jpg" alt="Evidencia 15" /><p>Campaña asistencia al vestido</p></div>
+      <section class="container" style={{ paddingTop: "6rem" }}>
+        <div class="section-header">
+          <h2>Actuar Reciente</h2>
+          <p class="section-subtitle">
+            Nuestros proyectos más actuales que están generando cambios hoy
+            mismo.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card-v3">
+            <img
+              src="/unavida/c16.jfif"
+              alt="Ford Global Caring Month"
+              class="card-v3-img"
+            />
+            <div class="card-v3-content">
+              <h3>Ford Global Caring Month</h3>
+              <p>
+                Habilitación y mejora de instalaciones para una atención más
+                digna y humana en el Comedor de la Luz.
+              </p>
+            </div>
+          </div>
+          <div class="card-v3">
+            <img
+              src="/unavida/c17.jfif"
+              alt="Campaña Navideña"
+              class="card-v3-img"
+            />
+            <div class="card-v3-content">
+              <h3>Iluminando su Navidad 2025</h3>
+              <p>
+                Llevando gestos de luz, esperanza y compañía a los niños que más
+                lo necesitan en zonas vulnerables.
+              </p>
+            </div>
+          </div>
+          <div class="card-v3">
+            <img src="/unavida/c18.jfif" alt="Donaciones" class="card-v3-img" />
+            <div class="card-v3-content">
+              <h3>Comedor de la Luz</h3>
+              <p>
+                Entrega constante de donaciones en especie para sectores
+                vulnerables, sembrando alivio.
+              </p>
+            </div>
+          </div>
+          <div class="card-v3">
+            <img src="/unavida/c24.jfif" alt="Bambú" class="card-v3-img" />
+            <div class="card-v3-content">
+              <h3>Bambú: Habilidades para la Vida</h3>
+              <p>
+                Talleres de desarrollo socioemocional y empoderamiento
+                comunitario para jóvenes.
+              </p>
+            </div>
+          </div>
+          <div class="card-v3">
+            <img src="/unavida/c25.jfif" alt="Bazares" class="card-v3-img" />
+            <div class="card-v3-content">
+              <h3>Bazares Gratuitos</h3>
+              <p>
+                Facilitamos el acceso a artículos de primera necesidad a
+                comunidades indígenas sin costo.
+              </p>
+            </div>
+          </div>
+          <div class="card-v3">
+            <img
+              src="/unavida/c26.jfif"
+              alt="Voluntariado"
+              class="card-v3-img"
+            />
+            <div class="card-v3-content">
+              <h3>Vocación de Servicio</h3>
+              <p>
+                Nuestra red de voluntarios en plena acción transformando el
+                presente de Parral.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN DE FACEBOOK DINÁMICA (ENLACE) -->
+        <div
+          class="glass-card"
+          style={{
+            marginTop: "6rem",
+            padding: "4rem 2rem",
+            textAlign: "center",
+            background:
+              "linear-gradient(rgba(5, 160, 224, 0.05), rgba(189, 254, 2, 0.05))",
+            borderRadius: "var(--radius-xl)",
+          }}
+        >
+          <Facebook
+            size={48}
+            color="var(--color-primary)"
+            style={{ margin: "0 auto 1.5rem" }}
+          />
+          <h2>Galería de Facebook en Tiempo Real</h2>
+          <p
+            style={{
+              maxWidth: "700px",
+              margin: "1rem auto 2.5rem",
+              fontSize: "1.2rem",
+              color: "var(--color-text-light)",
+            }}
+          >
+            Debido a que nuestras actividades son diarias, la galería más
+            actualizada se encuentra en nuestra página de Facebook. ¡Síguenos
+            para no perderte nada!
+          </p>
+          <a
+            href="https://www.facebook.com/profile.php?id=100010717862570"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            style={{ padding: "1.2rem 3rem" }}
+          >
+            Ir a la Galería Completa en Facebook
+          </a>
+        </div>
+
+        <div class="section-header" style={{ marginTop: "8rem" }}>
+          <GalleryHorizontal
+            size={32}
+            color="var(--color-secondary)"
+            style={{ margin: "0 auto 1rem" }}
+          />
+          <h2>Histórico de Actividades</h2>
+          <p class="section-subtitle">
+            Un recorrido por el camino de esperanza que hemos trazado juntos.
+          </p>
+        </div>
+
+        <div class="grid-3" style={{ marginBottom: "6rem" }}>
+          {
+            historicCampaigns.map((camp) => (
+              <div class="card-v3" style={{ padding: "0.8rem" }}>
+                <img
+                  src={camp.img}
+                  alt={camp.title}
+                  class="card-v3-img"
+                  style={{ height: "220px" }}
+                />
+                <div class="card-v3-content" style={{ padding: "1.5rem 1rem" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                      marginBottom: "0.5rem",
+                      color: "var(--color-secondary)",
+                    }}
+                  >
+                    <Calendar size={14} />
+                    <span
+                      style={{
+                        fontSize: "0.8rem",
+                        fontWeight: 700,
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      Evidencia
+                    </span>
+                  </div>
+                  <h4 style={{ fontSize: "1.15rem", fontWeight: 700 }}>
+                    {camp.title}
+                  </h4>
+                </div>
+              </div>
+            ))
+          }
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2025 Una Vida Una Historia A.C.</p>
-      </div>
-    </footer>
+
+    <Footer />
   </body>
 </html>
 
 <style>
-  .page-title {
-    color: var(--color-primary);
-    text-align: center;
-    margin: 3rem 0 1rem 0;
-    font-size: 2.5rem;
+  .card-v3:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
   }
-  .campanas-subtitle {
-    text-align: center;
-    color: #444;
-    margin-bottom: 2.5rem;
-    font-size: 1.15rem;
-  }
-  .campanas-galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-  }
-  .campana-card {
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    padding: 1.2rem 1.2rem 1.5rem 1.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    min-height: 340px;
-  }
-  .campana-card img {
-    width: 100%;
-    max-width: 320px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 1rem;
-    background: #eee;
-  }
-  .campana-card p {
-    color: #333;
-    font-size: 1.05rem;
-    margin: 0;
-    margin-top: 0.5rem;
-  }
-  .footer {
-    background-color: var(--color-primary);
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
-    margin-top: 4rem;
-  }
-  @media (max-width: 700px) {
-    .campanas-galeria-grid {
-      grid-template-columns: 1fr;
-      gap: 1.2rem;
-    }
-    .campana-card {
-      min-height: 0;
-      padding: 1rem 0.5rem 1.2rem 0.5rem;
-    }
-  }
-</style> 
+</style>

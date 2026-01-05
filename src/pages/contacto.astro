@@ -1,6 +1,10 @@
 ---
-import Navbar from '../components/Navbar';
-import '../styles/global.css';
+import Navbar from "../components/Navbar";
+import WhatsAppButton from "../components/WhatsAppButton";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import "../styles/landing.css";
+import { Mail, MapPin, Facebook, Heart, Users, Star } from "lucide-react";
 ---
 
 <html lang="es">
@@ -8,134 +12,347 @@ import '../styles/global.css';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto - Una Vida Una Historia A.C.</title>
-    <meta name="description" content="Contáctanos para colaborar o donar a Una Vida Una Historia A.C." />
+    <meta
+      name="description"
+      content="Contáctanos para colaborar o donar a Una Vida Una Historia A.C. Transformando realidades en Parral, Chihuahua."
+    />
   </head>
   <body>
     <Navbar client:load />
     <main>
-      <section class="container">
-        <h1 class="page-title">Contacto</h1>
+      <section class="container" style={{ paddingTop: "6rem" }}>
+        <div class="section-header">
+          <h2>Contacto</h2>
+          <p class="section-subtitle">
+            Con el corazón siempre la ayuda es bien recibida. Estamos aquí para
+            escucharte y trabajar juntos por nuestra comunidad.
+          </p>
+        </div>
 
-        <div class="contacto-container">
-          <div class="contacto-info">
-            <h2>Con el corazón siempre la ayuda es bien recibida.</h2>
-            <p>Estamos aquí para escucharte y trabajar juntos por nuestra comunidad.</p>
-            
-            <div class="info-item">
-              <h3>Ubicación</h3>
-              <p>Parral, Chihuahua, México</p>
+        <div class="contacto-v3">
+          <div class="contacto-info-v3">
+            <div class="info-card-v3">
+              <div class="info-card-v3-icon"><MapPin size={24} /></div>
+              <div>
+                <h4 style={{ fontWeight: 700 }}>Ubicación</h4>
+                <p>Parral, Chihuahua, México</p>
+              </div>
             </div>
 
-            <div class="info-item">
-              <h3>Correo Electrónico</h3>
-              <p>contacto@unavidaunahistoria.org</p>
+            <div class="info-card-v3">
+              <div class="info-card-v3-icon"><Mail size={24} /></div>
+              <div>
+                <h4 style={{ fontWeight: 700 }}>Correo Electrónico</h4>
+                <p>contacto@unavidaunahistoria.org</p>
+              </div>
+            </div>
+
+            <div
+              class="glass-card"
+              style={{
+                padding: "2.5rem",
+                borderRadius: "var(--radius-lg)",
+                marginTop: "2.5rem",
+                background: "rgba(5, 160, 224, 0.05)",
+              }}
+            >
+              <Facebook
+                size={32}
+                color="var(--color-primary)"
+                style={{ marginBottom: "1rem" }}
+              />
+              <h3
+                style={{
+                  fontSize: "1.5rem",
+                  marginBottom: "1rem",
+                  fontWeight: 800,
+                }}
+              >
+                Evidencias Diarias
+              </h3>
+              <p
+                style={{
+                  marginBottom: "1.5rem",
+                  color: "var(--color-text-light)",
+                  lineHeight: "1.6",
+                }}
+              >
+                Publicamos actualizaciones constantes de nuestras entregas y
+                actividades en Facebook. Síguenos para ver el impacto real.
+              </p>
+              <a
+                href="https://www.facebook.com/profile.php?id=100010717862570"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+                style={{ width: "100%", justifyContent: "center" }}
+              >
+                <Facebook size={20} /> Visitar Facebook
+              </a>
             </div>
           </div>
 
-          <div class="contacto-form" style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2rem;">
-            <a href="https://wa.me/5216271080425?text=Hola%2C%20me%20gustar%C3%ADa%20ponerme%20en%20contacto%20con%20Una%20Vida%20Una%20Historia%20A.C." class="whatsapp-button" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" class="whatsapp-icon" style="margin-right:8px;"><path fill="currentColor" d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
-              Contáctanos por WhatsApp
-            </a>
+          <div
+            class="glass-card shadow-lg"
+            style={{
+              padding: "3.5rem 2rem",
+              borderRadius: "var(--radius-xl)",
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              gap: "2rem",
+              border: "1px solid rgba(5, 160, 224, 0.1)",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "2.2rem",
+                fontWeight: 800,
+                color: "var(--color-primary)",
+              }}
+            >
+              ¡Hablemos hoy!
+            </h3>
+            <p
+              style={{
+                color: "var(--color-text-light)",
+                fontSize: "1.15rem",
+                maxWidth: "400px",
+                margin: "0 auto",
+              }}
+            >
+              La manera más rápida y directa de atención es vía WhatsApp. Haz
+              clic abajo para iniciar una conversación.
+            </p>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <WhatsAppButton
+                client:load
+                mensaje="Hola, me gustaría ponerme en contacto con Una Vida Una Historia A.C. para colaborar."
+              />
+            </div>
+            <p style={{ fontSize: "0.9rem", color: "#999" }}>
+              Atendemos de lunes a sábado de 9:00 AM a 6:00 PM
+            </p>
+          </div>
+        </div>
+
+        <!-- GRÁFICAS DE IMPACTO / ESTADÍSTICAS -->
+        <div class="section-header" style={{ marginTop: "8rem" }}>
+          <h2>Transparencia en Cifras</h2>
+          <p class="section-subtitle">
+            Cada peso y cada hora de voluntariado se traduce en resultados
+            tangibles para quienes más lo necesitan.
+          </p>
+        </div>
+
+        <div class="grid-3" style={{ marginBottom: "8rem" }}>
+          <div
+            class="glass-card"
+            style={{
+              padding: "3rem 2rem",
+              borderRadius: "var(--radius-lg)",
+              textAlign: "center",
+              borderBottom: "6px solid var(--color-primary)",
+              transition: "transform 0.3s ease",
+            }}
+          >
+            <div
+              style={{
+                background: "#f0f9ff",
+                width: "70px",
+                height: "70px",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                margin: "0 auto 2rem",
+              }}
+            >
+              <Users size={36} color="var(--color-primary)" />
+            </div>
+            <h3
+              style={{
+                fontSize: "3rem",
+                fontWeight: 900,
+                color: "var(--color-primary)",
+                marginBottom: "0.5rem",
+              }}
+            >
+              +850
+            </h3>
+            <p
+              style={{
+                fontWeight: 700,
+                fontSize: "1.1rem",
+                color: "var(--color-text)",
+                textTransform: "uppercase",
+                letterSpacing: "1px",
+              }}
+            >
+              Almas Ayudadas
+            </p>
+            <div
+              style={{
+                width: "100%",
+                height: "10px",
+                background: "#eee",
+                borderRadius: "5px",
+                marginTop: "2rem",
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  width: "88%",
+                  height: "100%",
+                  background: "var(--color-primary)",
+                }}
+              >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="glass-card"
+            style={{
+              padding: "3rem 2rem",
+              borderRadius: "var(--radius-lg)",
+              textAlign: "center",
+              borderBottom: "6px solid var(--color-secondary)",
+              transition: "transform 0.3s ease",
+            }}
+          >
+            <div
+              style={{
+                background: "#f7fee7",
+                width: "70px",
+                height: "70px",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                margin: "0 auto 2rem",
+              }}
+            >
+              <Heart size={36} color="#84cc16" />
+            </div>
+            <h3
+              style={{
+                fontSize: "3rem",
+                fontWeight: 900,
+                color: "#84cc16",
+                marginBottom: "0.5rem",
+              }}
+            >
+              1500+
+            </h3>
+            <p
+              style={{
+                fontWeight: 700,
+                fontSize: "1.1rem",
+                color: "var(--color-text)",
+                textTransform: "uppercase",
+                letterSpacing: "1px",
+              }}
+            >
+              Kilos de Esperanza
+            </p>
+            <div
+              style={{
+                width: "100%",
+                height: "10px",
+                background: "#eee",
+                borderRadius: "5px",
+                marginTop: "2rem",
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  width: "95%",
+                  height: "100%",
+                  background: "var(--color-secondary)",
+                }}
+              >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="glass-card"
+            style={{
+              padding: "3rem 2rem",
+              borderRadius: "var(--radius-lg)",
+              textAlign: "center",
+              borderBottom: "6px solid var(--color-accent)",
+              transition: "transform 0.3s ease",
+            }}
+          >
+            <div
+              style={{
+                background: "#fff1f2",
+                width: "70px",
+                height: "70px",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                margin: "0 auto 2rem",
+              }}
+            >
+              <Star size={36} color="var(--color-accent)" />
+            </div>
+            <h3
+              style={{
+                fontSize: "3rem",
+                fontWeight: 900,
+                color: "var(--color-accent)",
+                marginBottom: "0.5rem",
+              }}
+            >
+              24
+            </h3>
+            <p
+              style={{
+                fontWeight: 700,
+                fontSize: "1.1rem",
+                color: "var(--color-text)",
+                textTransform: "uppercase",
+                letterSpacing: "1px",
+              }}
+            >
+              Líneas de Acción
+            </p>
+            <div
+              style={{
+                width: "100%",
+                height: "10px",
+                background: "#eee",
+                borderRadius: "5px",
+                marginTop: "2rem",
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  width: "75%",
+                  height: "100%",
+                  background: "var(--color-accent)",
+                }}
+              >
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2025 Una Vida Una Historia A.C.</p>
-      </div>
-    </footer>
+    <Footer />
   </body>
 </html>
 
 <style>
-  .page-title {
-    color: var(--color-primary);
-    text-align: center;
-    margin: 3rem 0;
-    font-size: 2.5rem;
+  .glass-card:hover {
+    transform: translateY(-10px);
   }
-
-  .contacto-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    margin: 4rem 0;
-  }
-
-  .contacto-info {
-    padding-right: 2rem;
-  }
-
-  .contacto-info h2 {
-    color: var(--color-primary);
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-  }
-
-  .info-item {
-    margin-top: 2rem;
-  }
-
-  .info-item h3 {
-    color: var(--color-primary);
-    margin-bottom: 0.5rem;
-  }
-
-  .contacto-form {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
-
-  .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--color-text);
-  }
-
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-
-  .form-group textarea {
-    resize: vertical;
-  }
-
-  .contacto-form button {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.1rem;
-  }
-
-  .footer {
-    background-color: var(--color-primary);
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
-    margin-top: 4rem;
-  }
-
-  @media (max-width: 768px) {
-    .contacto-container {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .contacto-info {
-      padding-right: 0;
-      text-align: center;
-    }
-  }
-</style> 
+</style>

@@ -1,8 +1,10 @@
 ---
-import Navbar from '../components/Navbar';
-import WhatsAppButton from '../components/WhatsAppButton';
-import { Gift, HandHeart, Users, HeartHandshake } from 'lucide-react';
-import '../styles/global.css';
+import Navbar from "../components/Navbar";
+import WhatsAppButton from "../components/WhatsAppButton";
+import Footer from "../components/Footer.astro";
+import { Gift, HandHeart, Users, HeartHandshake, Sparkles } from "lucide-react";
+import "../styles/global.css";
+import "../styles/landing.css";
 ---
 
 <html lang="es">
@@ -10,161 +12,227 @@ import '../styles/global.css';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donar - Una Vida Una Historia A.C.</title>
-    <meta name="description" content="Dona y apoya a Una Vida Una Historia A.C. en Parral, Chihuahua. Tu ayuda transforma vidas." />
+    <meta
+      name="description"
+      content="Dona y apoya a Una Vida Una Historia A.C. en Parral, Chihuahua. Tu ayuda transforma vidas."
+    />
   </head>
   <body>
     <Navbar client:load />
     <main>
-      <section class="donar-hero">
-        <div class="donar-hero-content container">
-          <div class="donar-hero-left">
-            <h1 class="donar-title"><Gift size={32} style={{marginRight:'12px', verticalAlign:'middle'}} />Donar</h1>
-            <p class="donar-desc">Tu donativo ayuda a transformar vidas y a seguir cumpliendo sueños en Parral, Chihuahua. ¡Gracias por tu generosidad!</p>
-            <WhatsAppButton mensaje="Hola, me gustaría donar a Una Vida Una Historia A.C. ¿Me pueden dar información?" />
+      <section class="container" style={{ paddingTop: "6rem" }}>
+        <div class="donar-v3">
+          <div
+            class="card-v3"
+            style={{
+              padding: "3rem",
+              flex: 1.5,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <h1
+              style={{
+                fontSize: "3rem",
+                fontWeight: 900,
+                color: "var(--color-primary)",
+                marginBottom: "1.5rem",
+              }}
+            >
+              Dona Esperanza
+            </h1>
+            <p
+              style={{
+                fontSize: "1.25rem",
+                marginBottom: "2.5rem",
+                color: "var(--color-text-light)",
+                lineHeight: "1.8",
+              }}
+            >
+              Tu donativo ayuda a transformar vidas y a seguir cumpliendo sueños
+              en Parral, Chihuahua. Cada peso se destina directamente a
+              programas de alimentación, salud y educación emocional.
+            </p>
+            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+              <WhatsAppButton
+                client:load
+                mensaje="Hola, quiero información sobre cómo realizar un donativo económico."
+              />
+            </div>
           </div>
-          <div class="donar-hero-right">
-            <img src="/c3.jpg" alt="Campaña navideña" class="donar-hero-img" />
+          <div style={{ flex: 1 }}>
+            <img
+              src="/unavida/c17.jfif"
+              alt="Impacto"
+              style={{
+                width: "100%",
+                borderRadius: "var(--radius-xl)",
+                boxShadow: "var(--shadow-lg)",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
           </div>
         </div>
-      </section>
 
-      <section class="donar-info container">
-        <h2><HandHeart size={28} style={{marginRight:'8px', verticalAlign:'middle'}} />¿Por qué donar?</h2>
-        <p>Con tu apoyo podemos:</p>
-        <ul class="donar-list">
-          <li><Users size={20} style={{marginRight:'8px'}} />Beneficiar a más familias y niños en situación vulnerable.</li>
-          <li><HeartHandshake size={20} style={{marginRight:'8px'}} />Realizar campañas de salud, educación y alimentación.</li>
-          <li><Gift size={20} style={{marginRight:'8px'}} />Cumplir sueños y necesidades básicas de la comunidad.</li>
-        </ul>
-        <div class="donar-galeria">
-          <img src="/c1.jpg" alt="Habilidades para la vida" />
-          <img src="/c5.jpg" alt="Recaudación en especie" />
-          <img src="/c6.jpg" alt="Bazar gratuito" />
-          <img src="/volutarios.png" alt="Voluntarios" />
+        <div style={{ marginTop: "6rem", marginBottom: "6rem" }}>
+          <div class="section-header">
+            <HeartHandshake
+              size={32}
+              color="var(--color-primary)"
+              style={{ margin: "0 auto 1rem" }}
+            />
+            <h2>¿Por qué tu donativo importa?</h2>
+          </div>
+
+          <div class="grid-3">
+            <div
+              class="glass-card"
+              style={{ padding: "2.5rem", textAlign: "center" }}
+            >
+              <div
+                style={{
+                  background: "rgba(5, 160, 224, 0.1)",
+                  width: "60px",
+                  height: "60px",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "0 auto 1.5rem",
+                }}
+              >
+                <Users size={28} color="var(--color-primary)" />
+              </div>
+              <h4
+                style={{
+                  fontSize: "1.2rem",
+                  fontWeight: 800,
+                  marginBottom: "1rem",
+                }}
+              >
+                Nuevos Beneficiarios
+              </h4>
+              <p style={{ color: "var(--color-text-light)" }}>
+                Expandimos nuestra red de apoyo a más familias en situaciones
+                críticas.
+              </p>
+            </div>
+
+            <div
+              class="glass-card"
+              style={{ padding: "2.5rem", textAlign: "center" }}
+            >
+              <div
+                style={{
+                  background: "rgba(5, 160, 224, 0.1)",
+                  width: "60px",
+                  height: "60px",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "0 auto 1.5rem",
+                }}
+              >
+                <Sparkles size={28} color="var(--color-primary)" />
+              </div>
+              <h4
+                style={{
+                  fontSize: "1.2rem",
+                  fontWeight: 800,
+                  marginBottom: "1rem",
+                }}
+              >
+                Programas de Salud
+              </h4>
+              <p style={{ color: "var(--color-text-light)" }}>
+                Financiamos campañas de salud preventiva y mental para la
+                comunidad.
+              </p>
+            </div>
+
+            <div
+              class="glass-card"
+              style={{ padding: "2.5rem", textAlign: "center" }}
+            >
+              <div
+                style={{
+                  background: "rgba(5, 160, 224, 0.1)",
+                  width: "60px",
+                  height: "60px",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "0 auto 1.5rem",
+                }}
+              >
+                <Gift size={28} color="var(--color-primary)" />
+              </div>
+              <h4
+                style={{
+                  fontSize: "1.2rem",
+                  fontWeight: 800,
+                  marginBottom: "1rem",
+                }}
+              >
+                Necesidades Básicas
+              </h4>
+              <p style={{ color: "var(--color-text-light)" }}>
+                Garantizamos que ningún niño en nuestro sector pase hambre o
+                frío.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="donar-cta">
-          <WhatsAppButton mensaje="Hola, quiero donar a Una Vida Una Historia A.C. ¿Cómo puedo hacerlo?" />
+
+        <div
+          class="glass-card"
+          style={{
+            padding: "4rem 2rem",
+            textAlign: "center",
+            background:
+              "linear-gradient(135deg, var(--color-primary) 0%, #0369a1 100%)",
+            color: "#fff",
+            borderRadius: "var(--radius-xl)",
+          }}
+        >
+          <h2
+            style={{
+              color: "#fff",
+              fontSize: "2.5rem",
+              fontWeight: 900,
+              marginBottom: "1.5rem",
+            }}
+          >
+            Juntos somos más fuertes
+          </h2>
+          <p
+            style={{
+              maxWidth: "600px",
+              margin: "0 auto 3rem",
+              fontSize: "1.25rem",
+              opacity: 0.9,
+            }}
+          >
+            Cada aportación, por pequeña que sea, es un rayo de luz en la vida
+            de alguien.
+          </p>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <a
+              href="https://wa.me/5216271080425"
+              target="_blank"
+              class="btn btn-secondary"
+              style={{ padding: "1.2rem 3rem", fontSize: "1.1rem" }}
+            >
+              Información de Cuentas Bancarias
+            </a>
+          </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2025 Una Vida Una Historia A.C.</p>
-      </div>
-    </footer>
+    <Footer />
   </body>
 </html>
-
-<style>
-.donar-hero {
-  background: linear-gradient(90deg, #05A0E0 60%, #BDFE02 100%);
-  padding: 4rem 0 2rem 0;
-  color: #fff;
-}
-.donar-hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-.donar-hero-left {
-  flex: 1;
-}
-.donar-title {
-  font-size: 2.7rem;
-  font-weight: bold;
-  margin-bottom: 1.2rem;
-  display: flex;
-  align-items: center;
-}
-.donar-desc {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-.donar-hero-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.donar-hero-img {
-  width: 100%;
-  max-width: 340px;
-  border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-}
-.donar-info {
-  margin: 4rem auto;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-  padding: 3rem 2rem;
-  text-align: center;
-}
-.donar-info h2 {
-  color: var(--color-primary);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.donar-list {
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0 2.5rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  align-items: flex-start;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.donar-list li {
-  background: var(--color-secondary);
-  color: #222;
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  font-size: 1.1rem;
-}
-.donar-galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  margin: 2.5rem 0;
-}
-.donar-galeria img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  object-fit: cover;
-  background: #f8f9fa;
-  height: 140px;
-}
-.donar-cta {
-  margin-top: 2.5rem;
-}
-@media (max-width: 900px) {
-  .donar-hero-content {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-  }
-  .donar-hero-img {
-    max-width: 100%;
-    margin-top: 1.5rem;
-  }
-}
-@media (max-width: 600px) {
-  .donar-hero {
-    padding: 2rem 0 1rem 0;
-  }
-  .donar-info {
-    padding: 1.5rem 0.5rem;
-  }
-  .donar-title {
-    font-size: 1.5rem;
-  }
-}
-</style> 

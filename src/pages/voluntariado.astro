@@ -1,7 +1,18 @@
 ---
-import Navbar from '../components/Navbar';
-import WhatsAppButton from '../components/WhatsAppButton';
-import '../styles/global.css';
+import Navbar from "../components/Navbar";
+import WhatsAppButton from "../components/WhatsAppButton";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import "../styles/landing.css";
+import {
+  Users,
+  Clock,
+  Heart,
+  Sparkles,
+  LayoutGrid,
+  Megaphone,
+  Target,
+} from "lucide-react";
 ---
 
 <html lang="es">
@@ -9,63 +20,173 @@ import '../styles/global.css';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Voluntariado - Una Vida Una Historia A.C.</title>
-    <meta name="description" content="Únete como voluntario a Una Vida Una Historia A.C. y ayuda a transformar vidas en Parral, Chihuahua." />
+    <meta
+      name="description"
+      content="Únete como voluntario a Una Vida Una Historia A.C. y ayuda a transformar vidas en Parral, Chihuahua."
+    />
   </head>
   <body>
     <Navbar client:load />
     <main>
-      <section class="container">
-        <h1 class="page-title">Voluntariado</h1>
+      <section class="container" style="padding-top: 4rem;">
+        <div class="section-header">
+          <h2>Haz la Diferencia</h2>
+          <p class="section-subtitle">
+            Únete a nuestra red de voluntarios y sé parte del cambio que
+            queremos ver en nuestra comunidad.
+          </p>
+        </div>
 
-        <div class="info-container">
-          <div class="info-content">
-            <h2>¿Por qué ser voluntario?</h2>
-            <p>Ser voluntario en Una Vida Una Historia A.C. es una oportunidad única para:</p>
-            <ul class="benefits-list">
-              <li>Contribuir directamente al bienestar de tu comunidad</li>
-              <li>Desarrollar nuevas habilidades y experiencias</li>
-              <li>Conocer personas con intereses similares</li>
-              <li>Crear un impacto positivo en la vida de otros</li>
-            </ul>
-
-            <h2>¿Qué necesitas para ser voluntario?</h2>
-            <ul class="requirements-list">
-              <li>Mayor de 18 años</li>
-              <li>Disponibilidad de tiempo</li>
-              <li>Compromiso y empatía</li>
-              <li>Ganas de ayudar</li>
-            </ul>
-
-            <h2>Áreas de voluntariado</h2>
-            <div class="areas-grid">
-              <div class="area-card">
-                <h3>Logística</h3>
-                <p>Apoyo en la organización de eventos y campañas</p>
+        <div class="grid-3" style="margin-bottom: 6rem;">
+          <div class="card-v3">
+            <div class="card-v3-content">
+              <div style="margin-bottom: 1rem;">
+                <Heart size={32} color="var(--color-primary)" />
               </div>
-              <div class="area-card">
-                <h3>Comunicación</h3>
-                <p>Difusión de actividades y redes sociales</p>
-              </div>
-              <div class="area-card">
-                <h3>Proyectos</h3>
-                <p>Participación directa en proyectos sociales</p>
-              </div>
+              <h3>¿Por qué ser voluntario?</h3>
+              <p>Es una oportunidad única para:</p>
+              <ul style="list-style: none; padding: 0;">
+                <li
+                  style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"
+                >
+                  <Sparkles size={16} /> Bienestar comunitario
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"
+                >
+                  <Sparkles size={16} /> Nuevas habilidades
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"
+                >
+                  <Sparkles size={16} /> Conexiones humanas
+                </li>
+              </ul>
             </div>
+          </div>
 
-            <div class="cta-section">
-              <h2>¿Listo para unirte?</h2>
-              <p>Contáctanos para más información sobre cómo puedes ser parte de nuestro equipo de voluntarios.</p>
-              <WhatsAppButton client:load mensaje="Hola, me gustaría información sobre cómo ser voluntario en Una Vida Una Historia A.C." />
+          <div class="card-v3">
+            <div class="card-v3-content">
+              <div style="margin-bottom: 1rem;">
+                <Clock size={32} color="var(--color-primary)" />
+              </div>
+              <h3>Requisitos</h3>
+              <ul style="list-style: none; padding: 0;">
+                <li
+                  style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"
+                >
+                  <Target size={16} /> Mayor de 18 años
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"
+                >
+                  <Target size={16} /> Disponibilidad de tiempo
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"
+                >
+                  <Target size={16} /> Compromiso y empatía
+                </li>
+              </ul>
             </div>
+          </div>
+
+          <div class="card-v3">
+            <img
+              src="/unavida/c26.jfif"
+              alt="Voluntariado"
+              style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg);"
+            />
+          </div>
+        </div>
+
+        <div class="section-header">
+          <h2>Áreas de Acción</h2>
+        </div>
+
+        <div class="grid-3" style="margin-bottom: 6rem;">
+          <div
+            class="glass-card"
+            style={{
+              padding: "2.5rem",
+              borderRadius: "var(--radius-lg)",
+              textAlign: "center",
+            }}
+          >
+            <LayoutGrid
+              size={42}
+              color="var(--color-primary)"
+              style={{ margin: "0 auto 1.5rem" }}
+            />
+            <h3 style={{ marginBottom: "1rem" }}>Logística</h3>
+            <p>
+              Apoyo en la organización de eventos y ejecución de campañas
+              solidarias.
+            </p>
+          </div>
+          <div
+            class="glass-card"
+            style={{
+              padding: "2.5rem",
+              borderRadius: "var(--radius-lg)",
+              textAlign: "center",
+            }}
+          >
+            <Megaphone
+              size={42}
+              color="var(--color-primary)"
+              style={{ margin: "0 auto 1.5rem" }}
+            />
+            <h3 style={{ marginBottom: "1rem" }}>Comunicación</h3>
+            <p>
+              Ayúdanos a difundir el impacto de nuestras actividades en redes
+              sociales.
+            </p>
+          </div>
+          <div
+            class="glass-card"
+            style={{
+              padding: "2.5rem",
+              borderRadius: "var(--radius-lg)",
+              textAlign: "center",
+            }}
+          >
+            <Users
+              size={42}
+              color="var(--color-primary)"
+              style={{ margin: "0 auto 1.5rem" }}
+            />
+            <h3 style={{ marginBottom: "1rem" }}>Proyectos</h3>
+            <p>
+              Participación directa en talleres y trabajo de campo con la
+              comunidad.
+            </p>
+          </div>
+        </div>
+
+        <div class="donar-v3" style="margin-bottom: 6rem;">
+          <div
+            class="container"
+            style="text-align: center; padding: 4rem 1rem;"
+          >
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">
+              ¿Listo para unirte?
+            </h2>
+            <p
+              style="font-size: 1.2rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;"
+            >
+              Contáctanos para más información sobre cómo puedes ser parte de
+              nuestro equipo de voluntarios.
+            </p>
+            <WhatsAppButton
+              client:load
+              mensaje="Hola, me gustaría información sobre cómo ser voluntario en Una Vida Una Historia A.C."
+            />
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2025 Una Vida Una Historia A.C.</p>
-      </div>
-    </footer>
+    <Footer />
   </body>
 </html>
 
@@ -154,4 +275,4 @@ import '../styles/global.css';
       grid-template-columns: 1fr;
     }
   }
-</style> 
+</style>

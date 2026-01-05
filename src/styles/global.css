@@ -1,9 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
 :root {
   --color-primary: #05A0E0;
   --color-secondary: #BDFE02;
-  --color-text: #333333;
+  --color-accent: #FF5C8D;
+  --color-text: #1A1A1A;
+  --color-text-light: #666666;
   --color-background: #ffffff;
-  --font-family: 'Arial', sans-serif;
+  --font-main: 'Outfit', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
 }
 
 * {
@@ -13,46 +27,73 @@
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: var(--font-main);
   color: var(--color-text);
   line-height: 1.6;
+  background-color: #fcfcfc;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .btn {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-md);
   text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   border: none;
+  font-size: 1rem;
 }
 
 .btn-primary {
   background-color: var(--color-primary);
   color: white;
+  box-shadow: 0 4px 14px rgba(5, 160, 224, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #0488bf;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(5, 160, 224, 0.4);
 }
 
 .btn-secondary {
   background-color: var(--color-secondary);
-  color: var(--color-text);
+  color: #1A1A1A;
+  box-shadow: 0 4px 14px rgba(189, 254, 2, 0.3);
 }
 
-.btn:hover {
-  opacity: 0.9;
+.btn-secondary:hover {
+  background-color: #a8e302;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(189, 254, 2, 0.4);
+}
+
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-md);
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 0.5rem;
+    padding: 0 1rem;
   }
 } 

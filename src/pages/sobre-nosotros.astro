@@ -1,8 +1,19 @@
 ---
-import Navbar from '../components/Navbar';
-import TestimonioCard from '../components/TestimonioCard';
-import '../styles/global.css';
-import { Target, Eye, Gem, Handshake, HeartHandshake, ShieldCheck, Users, HandHeart } from 'lucide-react';
+import Navbar from "../components/Navbar";
+import TestimonioCard from "../components/TestimonioCard";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import "../styles/landing.css";
+import {
+  Target,
+  Eye,
+  Gem,
+  Handshake,
+  HeartHandshake,
+  ShieldCheck,
+  Users,
+  HandHeart,
+} from "lucide-react";
 ---
 
 <html lang="es">
@@ -10,58 +21,127 @@ import { Target, Eye, Gem, Handshake, HeartHandshake, ShieldCheck, Users, HandHe
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre Nosotros - Una Vida Una Historia A.C.</title>
-    <meta name="description" content="Conoce más sobre nuestra misión, visión y valores en Una Vida Una Historia A.C." />
+    <meta
+      name="description"
+      content="Conoce más sobre nuestra misión, visión y valores en Una Vida Una Historia A.C."
+    />
   </head>
   <body>
     <Navbar client:load />
     <main>
-      <section class="container">
-        <h1 class="page-title">Sobre Nosotros</h1>
-        <div class="about-grid">
-          <div class="about-section card-about">
-            <div class="about-icon"><Target size={32} color="#05A0E0" /></div>
-            <h2>Misión</h2>
-            <img src="/hero.png" alt="Misión" class="about-img" />
-            <p>Crear y desarrollar proyectos que mejoren la calidad de vida de grupos vulnerables en Parral, Chihuahua, a través de la colaboración y el compromiso social.</p>
+      <section class="container" style={{ paddingTop: "4rem" }}>
+        <div class="section-header">
+          <h2>Sobre Nosotros</h2>
+          <p class="section-subtitle">
+            Conoce el corazón de nuestra organización y nuestro compromiso con
+            Parral.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card-v3">
+            <div class="card-v3-content">
+              <div style={{ marginBottom: "1.5rem" }}>
+                <Target size={42} color="var(--color-primary)" />
+              </div>
+              <h3>Misión</h3>
+              <p>
+                Crear y desarrollar proyectos que mejoren la calidad de vida de
+                grupos vulnerables en Parral, Chihuahua, a través de la
+                colaboración y el compromiso social.
+              </p>
+              <img
+                src="/hero.png"
+                alt="Misión"
+                style={{
+                  width: "100%",
+                  borderRadius: "var(--radius-md)",
+                  marginTop: "auto",
+                }}
+              />
+            </div>
           </div>
 
-          <div class="about-section card-about">
-            <div class="about-icon"><Eye size={32} color="#05A0E0" /></div>
-            <h2>Visión</h2>
-            <img src="/volutarios.png" alt="Visión" class="about-img" />
-            <p>Ser una organización líder en la transformación social de nuestra comunidad, generando un impacto positivo y sostenible en la vida de las personas más necesitadas.</p>
+          <div class="card-v3">
+            <div class="card-v3-content">
+              <div style={{ marginBottom: "1.5rem" }}>
+                <Eye size={42} color="var(--color-primary)" />
+              </div>
+              <h3>Visión</h3>
+              <p>
+                Ser una organización líder en la transformación social de
+                nuestra comunidad, generando un impacto positivo y sostenible en
+                la vida de las personas más necesitadas.
+              </p>
+              <img
+                src="/volutarios.png"
+                alt="Visión"
+                style={{
+                  width: "100%",
+                  borderRadius: "var(--radius-md)",
+                  marginTop: "auto",
+                }}
+              />
+            </div>
           </div>
 
-          <div class="about-section card-about">
-            <div class="about-icon"><Gem size={32} color="#05A0E0" /></div>
-            <h2>Valores</h2>
-            <img src="/luz.png" alt="Valores" class="about-img" />
-            <ul class="values-list">
-              <li><Handshake size={20} color="#BDFE02" style={{marginRight:'8px'}} />Compromiso</li>
-              <li><HeartHandshake size={20} color="#BDFE02" style={{marginRight:'8px'}} />Empatía</li>
-              <li><ShieldCheck size={20} color="#BDFE02" style={{marginRight:'8px'}} />Integridad</li>
-              <li><Users size={20} color="#BDFE02" style={{marginRight:'8px'}} />Solidaridad</li>
-              <li><HandHeart size={20} color="#BDFE02" style={{marginRight:'8px'}} />Transparencia</li>
-            </ul>
+          <div class="card-v3">
+            <div class="card-v3-content">
+              <div style={{ marginBottom: "1.5rem" }}>
+                <Gem size={42} color="var(--color-primary)" />
+              </div>
+              <h3>Valores</h3>
+              <ul class="values-list">
+                <li>
+                  <Handshake size={20} color="var(--color-primary)" /> Compromiso
+                </li>
+                <li>
+                  <HeartHandshake size={20} color="var(--color-primary)" /> Empatía
+                </li>
+                <li>
+                  <ShieldCheck size={20} color="var(--color-primary)" /> Integridad
+                </li>
+                <li>
+                  <Users size={20} color="var(--color-primary)" /> Solidaridad
+                </li>
+                <li>
+                  <HandHeart size={20} color="var(--color-primary)" /> Transparencia
+                </li>
+              </ul>
+              <img
+                src="/luz.png"
+                alt="Valores"
+                style={{
+                  width: "100%",
+                  borderRadius: "var(--radius-md)",
+                  marginTop: "auto",
+                }}
+              />
+            </div>
           </div>
         </div>
 
-        <div class="testimonios-section">
-          <h2>Testimonios</h2>
-          <div class="cards-grid">
-            <TestimonioCard 
+        <div style={{ marginTop: "6rem", marginBottom: "6rem" }}>
+          <div class="section-header">
+            <h2>Testimonios</h2>
+            <p class="section-subtitle">
+              Lo que dicen quienes caminan a nuestro lado.
+            </p>
+          </div>
+          <div class="grid-3">
+            <TestimonioCard
               client:load
               nombre="Antonio"
               rol="Voluntario"
-              testimonio="Ser parte de Una Vida Una Historia ha sido una experiencia transformadora. Ver la sonrisa de las personas que ayudamos es lo más gratificante."
+              testimonio="Ser parte de Una Vida Una Historia ha sido una experiencia transformadora. Ver la sonrisa de las personas es lo más gratificante."
             />
-            <TestimonioCard 
+            <TestimonioCard
               client:load
               nombre="Rocío"
               rol="Beneficiaria"
               testimonio="Gracias a la organización, mi familia y yo hemos recibido apoyo invaluable en momentos difíciles."
             />
-            <TestimonioCard 
+            <TestimonioCard
               client:load
               nombre="John"
               rol="Donante"
@@ -71,13 +151,29 @@ import { Target, Eye, Gem, Handshake, HeartHandshake, ShieldCheck, Users, HandHe
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2025 Una Vida Una Historia A.C.</p>
-      </div>
-    </footer>
+
+    <Footer />
   </body>
 </html>
+
+<style>
+  .values-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+  .values-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-text);
+  }
+</style>
 
 <style>
   .page-title {
@@ -95,7 +191,7 @@ import { Target, Eye, Gem, Handshake, HeartHandshake, ShieldCheck, Users, HandHe
   .card-about {
     background: #fff;
     border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     padding: 2.5rem 1.5rem 2rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -111,7 +207,7 @@ import { Target, Eye, Gem, Handshake, HeartHandshake, ShieldCheck, Users, HandHe
     max-width: 180px;
     border-radius: 12px;
     margin: 1rem auto 1.5rem auto;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
     object-fit: cover;
     background: #f8f9fa;
   }
@@ -170,4 +266,4 @@ import { Target, Eye, Gem, Handshake, HeartHandshake, ShieldCheck, Users, HandHe
       padding: 2rem 0.5rem 1.5rem 0.5rem;
     }
   }
-</style> 
+</style>

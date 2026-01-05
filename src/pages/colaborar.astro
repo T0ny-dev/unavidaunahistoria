@@ -1,7 +1,10 @@
 ---
-import Navbar from '../components/Navbar';
-import WhatsAppButton from '../components/WhatsAppButton';
-import '../styles/global.css';
+import Navbar from "../components/Navbar";
+import WhatsAppButton from "../components/WhatsAppButton";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import "../styles/landing.css";
+import { Gift, HandHeart, Briefcase, Heart, Sparkles } from "lucide-react";
 ---
 
 <html lang="es">
@@ -9,191 +12,146 @@ import '../styles/global.css';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Colaborar - Una Vida Una Historia A.C.</title>
-    <meta name="description" content="Descubre las diferentes formas de colaborar con Una Vida Una Historia A.C. en Parral, Chihuahua." />
+    <meta
+      name="description"
+      content="Descubre las diferentes formas de colaborar con Una Vida Una Historia A.C. en Parral, Chihuahua."
+    />
   </head>
   <body>
     <Navbar client:load />
     <main>
-      <section class="container">
-        <h1 class="page-title">Colaborar</h1>
+      <section class="container" style={{ paddingTop: "6rem" }}>
+        <div class="section-header">
+          <h2>Formas de Ayudar</h2>
+          <p class="section-subtitle">
+            Tu apoyo es el motor que impulsa nuestras manos. Hay un lugar para
+            ti en nuestra misión.
+          </p>
+        </div>
 
-        <div class="info-container">
-          <div class="info-content">
-            <h2>Formas de Colaborar</h2>
-            <p>Hay muchas maneras de apoyar nuestra causa y hacer una diferencia en nuestra comunidad:</p>
-
-            <div class="collaboration-grid">
-              <div class="collaboration-card">
-                <h3>Donaciones en Efectivo</h3>
-                <p>Tu contribución económica nos ayuda a mantener y expandir nuestros proyectos sociales.</p>
-                <ul>
-                  <li>Donación única</li>
-                  <li>Donación mensual</li>
-                  <li>Donación por proyecto</li>
-                </ul>
+        <div class="grid-3">
+          <div class="card-v3">
+            <div class="card-v3-content">
+              <div style={{ marginBottom: "1.5rem" }}>
+                <Gift size={42} color="var(--color-primary)" />
               </div>
-
-              <div class="collaboration-card">
-                <h3>Donaciones en Especie</h3>
-                <p>Aceptamos donaciones de:</p>
-                <ul>
-                  <li>Ropa y calzado</li>
-                  <li>Juguetes y libros</li>
-                  <li>Víveres y alimentos</li>
-                  <li>Material escolar</li>
-                </ul>
-              </div>
-
-              <div class="collaboration-card">
-                <h3>Apoyo Empresarial</h3>
-                <p>Las empresas pueden colaborar a través de:</p>
-                <ul>
-                  <li>Programas de responsabilidad social</li>
-                  <li>Matching gifts</li>
-                  <li>Voluntariado corporativo</li>
-                </ul>
-              </div>
+              <h3>Donaciones en Especie</h3>
+              <p>
+                Ropa, calzado, juguetes y víveres. Lo que para ti es un
+                excedente, para otros es una bendición.
+              </p>
+              <ul class="collaboration-list">
+                <li>Víveres no perecederos</li>
+                <li>Ropa en buen estado</li>
+                <li>Juguetes y Libros</li>
+                <li>Material escolar</li>
+              </ul>
             </div>
+          </div>
 
-            <div class="impact-section">
-              <h2>Tu Impacto</h2>
-              <div class="impact-grid">
-                <div class="impact-item">
-                  <h3>100+</h3>
-                  <p>Familias beneficiadas</p>
-                </div>
-                <div class="impact-item">
-                  <h3>50+</h3>
-                  <p>Voluntarios activos</p>
-                </div>
-                <div class="impact-item">
-                  <h3>20+</h3>
-                  <p>Proyectos realizados</p>
-                </div>
+          <div class="card-v3">
+            <div class="card-v3-content">
+              <div style={{ marginBottom: "1.5rem" }}>
+                <HandHeart size={42} color="var(--color-primary)" />
               </div>
+              <h3>Donaciones Económicas</h3>
+              <p>
+                Tu contribución monetaria permite la sostenibilidad de nuestros
+                programas permanentes.
+              </p>
+              <ul class="collaboration-list">
+                <li>Aportaciones únicas</li>
+                <li>Padrinos mensuales</li>
+                <li>Fondos para proyectos</li>
+              </ul>
             </div>
+          </div>
 
-            <div class="cta-section">
-              <h2>¿Cómo puedo colaborar?</h2>
-              <p>Contáctanos para conocer más sobre las diferentes formas de colaboración y cómo puedes hacer una diferencia en nuestra comunidad.</p>
-              <WhatsAppButton client:load mensaje="Hola, me gustaría información sobre cómo puedo colaborar con Una Vida Una Historia A.C." />
+          <div class="card-v3">
+            <div class="card-v3-content">
+              <div style={{ marginBottom: "1.5rem" }}>
+                <Briefcase size={42} color="var(--color-primary)" />
+              </div>
+              <h3>Alianzas con Causa</h3>
+              <p>
+                Las empresas pueden sumarse a través de programas de
+                responsabilidad social corporativa.
+              </p>
+              <ul class="collaboration-list">
+                <li>Donativos deducibles</li>
+                <li>Voluntariado corporativo</li>
+                <li>Patrocinio de eventos</li>
+              </ul>
             </div>
+          </div>
+        </div>
+
+        <div
+          class="glass-card"
+          style={{
+            marginTop: "6rem",
+            padding: "4rem 2rem",
+            textAlign: "center",
+            background: "var(--color-secondary)",
+          }}
+        >
+          <Sparkles
+            size={48}
+            color="var(--color-primary)"
+            style={{ margin: "0 auto 1.5rem" }}
+          />
+          <h2
+            style={{
+              fontSize: "2.2rem",
+              fontWeight: 800,
+              marginBottom: "1rem",
+            }}
+          >
+            ¿Listo para marcar la diferencia?
+          </h2>
+          <p
+            style={{
+              maxWidth: "600px",
+              margin: "0 auto 2.5rem",
+              fontSize: "1.15rem",
+              color: "var(--color-text)",
+            }}
+          >
+            No importa el tamaño de tu ayuda, el impacto es gigante. Contáctanos
+            y te guiaremos en el proceso.
+          </p>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <WhatsAppButton
+              client:load
+              mensaje="Hola, me interesa saber más sobre cómo puedo colaborar con la asociación."
+            />
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2025 Una Vida Una Historia A.C.</p>
-      </div>
-    </footer>
+    <Footer />
   </body>
 </html>
 
 <style>
-  .page-title {
-    color: var(--color-primary);
-    text-align: center;
-    margin: 3rem 0;
-    font-size: 2.5rem;
-  }
-
-  .info-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem 0;
-  }
-
-  .info-content h2 {
-    color: var(--color-primary);
-    margin: 2rem 0 1rem;
-    text-align: center;
-  }
-
-  .collaboration-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-  }
-
-  .collaboration-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .collaboration-card h3 {
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-  }
-
-  .collaboration-card ul {
+  .collaboration-list {
     list-style: none;
-    padding-left: 1rem;
-    margin-top: 1rem;
+    padding: 0;
+    margin-top: 2rem;
+    text-align: left;
   }
-
-  .collaboration-card li {
-    margin-bottom: 0.5rem;
+  .collaboration-list li {
     padding-left: 1.5rem;
     position: relative;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-light);
   }
-
-  .collaboration-card li::before {
-    content: "•";
-    color: var(--color-primary);
+  .collaboration-list li::before {
+    content: "✓";
     position: absolute;
     left: 0;
-  }
-
-  .impact-section {
-    margin: 4rem 0;
-    text-align: center;
-  }
-
-  .impact-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-
-  .impact-item h3 {
     color: var(--color-primary);
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-weight: 900;
   }
-
-  .cta-section {
-    text-align: center;
-    margin: 4rem 0;
-    padding: 2rem;
-    background: var(--color-secondary);
-    border-radius: 8px;
-  }
-
-  .cta-section h2 {
-    margin-top: 0;
-  }
-
-  .footer {
-    background-color: var(--color-primary);
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
-    margin-top: 4rem;
-  }
-
-  @media (max-width: 768px) {
-    .collaboration-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .impact-grid {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-  }
-</style> 
+</style>
