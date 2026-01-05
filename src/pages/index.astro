@@ -37,7 +37,7 @@ import {
       <!-- HERO MODERNO -->
       <section class="hero-mockup2">
         <div class="container hero-mockup2-content">
-          <div class="hero-mockup2-left">
+          <div class="hero-mockup2-left animate-left">
             <span class="hero-hashtag2">#JuntosPodemos</span>
             <h1 class="hero-title2">UNA VIDA UNA HISTORIA A.C.</h1>
             <p class="hero-desc2">
@@ -54,7 +54,7 @@ import {
               >
             </div>
           </div>
-          <div class="hero-mockup2-right">
+          <div class="hero-mockup2-right animate-right delay-1 animate-float">
             <a href="/voluntariado" class="hero-btn2 hero-btn-vol">
               <Users size={32} />
               <span>Voluntariado</span>
@@ -63,20 +63,20 @@ import {
               <Landmark size={32} />
               <span>Campañas</span>
             </a>
-            <div class="hero-btn2 glass-card">
+            <a href="/contacto" class="hero-btn2 glass-card">
               <Heart size={32} />
               <span>Impacto</span>
-            </div>
-            <div class="hero-btn2 glass-card">
+            </a>
+            <a href="/campañas" class="hero-btn2 glass-card">
               <Sparkles size={32} />
               <span>Historias</span>
-            </div>
+            </a>
           </div>
         </div>
       </section>
 
       <!-- SECCIÓN NOTAS / ACTUALIDAD -->
-      <section class="container" style={{ marginTop: "6rem" }}>
+      <section class="container reveal" style={{ marginTop: "6rem" }}>
         <div class="section-header">
           <h2>Nuestro Actuar Reciente</h2>
           <p class="section-subtitle">
@@ -175,12 +175,12 @@ import {
       </section>
 
       <!-- CAMPAÑAS PERMANENTES -->
-      <section class="container" style={{ marginBottom: "6rem" }}>
+      <section class="container reveal" style={{ marginTop: "6rem" }}>
         <div class="section-header">
           <h2>Programas Permanentes</h2>
           <p class="section-subtitle">
-            Nuestras líneas de acción continuas para el desarrollo comunitario
-            sostenible.
+            Nuestros pilares de acción continua para el desarrollo humano y
+            social.
           </p>
         </div>
         <div class="grid-3">
@@ -407,6 +407,24 @@ import {
     </a>
 
     <Footer />
+
+    <script is:inline>
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>
 
